@@ -11,7 +11,7 @@ The main senario of this application is to fetch 100 posts from the [{JSON} Plac
 Clone the repository to your local disk using this command:
 
 ```plaintext
-git clone https://github.com/hamoonzehzad/WPFSampleApplication
+git clone https://github.com/hamoonzehzad/WPFSampleApplication.git
 ```
 
 Open WPFSampleApplication.sln in Visual Studio 2022 then simply build and run the apploication.
