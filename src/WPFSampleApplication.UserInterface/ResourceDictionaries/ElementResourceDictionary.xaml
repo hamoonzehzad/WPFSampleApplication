@@ -1,0 +1,82 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Storyboard x:Key="ButtonBaseMouserEnterStoryboard">
+        <ColorAnimation  
+            Storyboard.TargetProperty= "(Button.Background).(SolidColorBrush.Color)"  
+            From="Black"
+            To= "MediumPurple" 
+            Duration ="00:00:00.30"
+            BeginTime="00:00:00"/>
+    </Storyboard>
+
+    <Storyboard x:Key="ButtonBaseMouserLeaveStoryboard">
+        <ColorAnimation  
+            Storyboard.TargetProperty= "(Button.Background).(SolidColorBrush.Color)"  
+            From= "MediumPurple" 
+            To="Black"
+            Duration ="00:00:00.30"
+            BeginTime="00:00:00"/>
+    </Storyboard>
+
+    <Style x:Key="TextBlockBaseStyle" TargetType="TextBlock">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontFamily" Value="Arial" />
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="FontWeight" Value="UltraLight" />
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect 
+                    BlurRadius="25" 
+                    ShadowDepth="0" 
+                    Direction="0" 
+                    Opacity="1" 
+                    Color="Black" 
+                    RenderingBias="Performance"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ButtonBaseStyle" TargetType="Button">
+        <Setter Property="Background" Value="Black"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Margin" Value="3"/>
+        <Setter Property="BorderBrush" Value="MediumPurple"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+                        Background="{TemplateBinding Property=Background}" 
+                        BorderThickness="{TemplateBinding Property=BorderThickness}" 
+                        BorderBrush="{TemplateBinding Property=BorderBrush}">
+                        
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Button.MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard Storyboard="{StaticResource ResourceKey=ButtonBaseMouserEnterStoryboard}"/>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="Button.MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard Storyboard="{StaticResource ResourceKey=ButtonBaseMouserLeaveStoryboard}"/>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

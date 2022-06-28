@@ -1,0 +1,44 @@
+﻿<Window x:Class="WPFSampleApplication.UserInterface.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:viewmodels="clr-namespace:WPFSampleApplication.UserInterface.ViewModels" 
+        xmlns:views="clr-namespace:WPFSampleApplication.UserInterface.Views"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
+        d:Width="800"
+        d:Height="600"
+        WindowStartupLocation="CenterScreen"
+        Style="{DynamicResource ResourceKey=WindowStyle}">
+
+    <Border Style="{DynamicResource ResourceKey=WindowBorderStyle}">
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Style="{DynamicResource ResourceKey=WindowContentGridStyle}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="9*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Style="{DynamicResource ResourceKey=WindowTitleStyle}" />
+                <TextBlock Style="{DynamicResource ResourceKey=WindowSubtitleStyle}" />
+
+                <ContentControl Style="{DynamicResource ResourceKey=WindowContentControlStyle}"/>
+            </Grid>
+
+            <Grid Style="{DynamicResource ResourceKey=WindowNavMenuGridStyle}">
+                <views:NavigationMenuView DataContext="{Binding Path=NavigationMenuViewModel}"/>
+            </Grid>
+        </Grid>
+    </Border>
+
+</Window>

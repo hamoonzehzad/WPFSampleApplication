@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    
+
+    <Style x:Key="NavigationMenuUserControlStyle" TargetType="UserControl">
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
+    <Style x:Key="NavigationMenuButtonBaseStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=ButtonBaseStyle}">
+        
+        <Setter Property="OpacityMask">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0.7,0.7" EndPoint="1,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Offset="0" Color="MediumPurple"/>
+                        <GradientStop Offset="1" Color="Transparent"/>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NavigationMenuHomeButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=NavigationMenuButtonBaseStyle}">
+        <Setter Property="Grid.Row" Value="1"/>
+        <Setter Property="Content" Value="H  O  M  E"/>
+        <Setter Property="Command" Value="{Binding Path=HomeButtonCommand}"/>
+    </Style>
+
+    <Style x:Key="NavigationMenuAboutButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=NavigationMenuButtonBaseStyle}">
+        <Setter Property="Grid.Row" Value="3"/>
+        <Setter Property="Content" Value="A  B  O  U  T"/>
+        <Setter Property="Command" Value="{Binding Path=AboutButtonCommand}"/>
+    </Style>
+
+    <Style x:Key="NavigationMenuPostsButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=NavigationMenuButtonBaseStyle}">
+        <Setter Property="Grid.Row" Value="5"/>
+        <Setter Property="Content" Value="P  O  S  T  S"/>
+        <Setter Property="Command" Value="{Binding Path=PostButtonCommand}"/>
+    </Style>
+
+    <Style x:Key="NavigationMenuQuitButtonStyle" TargetType="Button" BasedOn="{StaticResource ResourceKey=NavigationMenuButtonBaseStyle}">
+        <Setter Property="Grid.Row" Value="10"/>
+        <Setter Property="Content" Value="Q  U  I  T"/>
+        <Setter Property="Command" Value="{Binding Path=QuitButtonCommand}"/>
+    </Style>
+
+</ResourceDictionary>

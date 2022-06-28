@@ -1,0 +1,21 @@
+﻿<Application x:Class="WPFSampleApplication.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             DispatcherUnhandledException="App_DispatcherUnhandledException"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionaries/ElementResourceDictionary.xaml"/>
+                
+                <ResourceDictionary Source="/ResourceDictionaries/MainWindowResourceDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/NavigationMenuResourceDictionary.xaml"/>
+                
+                <ResourceDictionary Source="/ResourceDictionaries/HomeResourceDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/AboutResourceDictionary.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionaries/PostResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>
