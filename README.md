@@ -37,5 +37,5 @@ You can quit the application simply by using the quit button and confirm the mes
 - **Exception Handling:** Each project have it's own custom exception classes and error messages provided by resx files. There is a global exception handling event in the app.xaml.cs for DispatcherUnhandledException and depending on which type of exception is raised the application will handle it.
 - **Resource Dictionaries:** I put the styles, animations, triggers and etc in the resource dictionaries as much as I can in order to have a clean and readble xaml in the views. Also I used inheritance in styles for element such as buttons and text blocks.
 - **Commands:** For handling command in MVVM architecture I used DelegateCommands from Prism because I found it simple and easy to use instead of implementing ICommand classes manually.
-- **Main Window:** The main window of this project has a layout in 4 section. Title, subtitle and navigation menu are fixed as layout and the forth part is content control as a place holder of current section view. 
+- **Main Window:** The main window of this project has a layout in 4 section. Title, subtitle and navigation menu are fixed as layout and the fourth part is content control as a place holder of current section view. 
 
