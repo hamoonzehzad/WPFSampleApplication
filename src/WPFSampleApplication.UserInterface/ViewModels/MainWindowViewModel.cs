@@ -56,7 +56,7 @@ public sealed class MainWindowViewModel : ViewModelBase
     private void CurrentViewModel_PropertyChanged(object? sender, PropertyChangedEventArgs e)
     {
         // We will check if property changed is related to properties of main window or not.
-        // If this is the case we reftesh the properties.
+        // If this is the case we refresh the properties.
         if (e.PropertyName is nameof(Title))
         {
             OnPropertyChanged(nameof(Title));

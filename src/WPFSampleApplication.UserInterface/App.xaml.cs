@@ -5,7 +5,6 @@ using WPFSampleApplication.Service.Configurations.Service;
 using WPFSampleApplication.Service.Exceptions;
 using WPFSampleApplication.UserInterface.Configurations;
 using WPFSampleApplication.UserInterface.Exceptions;
-using WPFSampleApplication.UserInterface.Resources;
 using WPFSampleApplication.UserInterface.Stores;
 using WPFSampleApplication.UserInterface.ViewModels;
 using WPFSampleApplication.UserInterface.Views;
@@ -78,7 +77,7 @@ public partial class App : Application
     /// </summary>
     private void PreRenderViewModels()
     {
-        // activating the viewmodels by getting them ffrom service provider
+        // activating the viewmodels by getting them from service provider
         _serviceProvider.GetRequiredService<HomeViewModel>();
         _serviceProvider.GetRequiredService<AboutViewModel>();
         _serviceProvider.GetRequiredService<PostViewModel>();

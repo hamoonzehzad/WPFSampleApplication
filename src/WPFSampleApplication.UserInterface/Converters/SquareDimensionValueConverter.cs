@@ -2,7 +2,6 @@
 using WPFSampleApplication.UserInterface.Exceptions;
 using WPFSampleApplication.UserInterface.Resources;
 using System.Globalization;
-using System.Windows;
 
 namespace WPFSampleApplication.UserInterface.Converters;
 

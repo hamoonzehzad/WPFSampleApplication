@@ -1,5 +1,4 @@
 ﻿using WPFSampleApplication.UserInterface.Abstractions;
-using System.Windows;
 
 namespace WPFSampleApplication.UserInterface.Exceptions;
 

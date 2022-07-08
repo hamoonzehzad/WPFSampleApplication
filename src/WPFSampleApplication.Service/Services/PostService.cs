@@ -2,9 +2,7 @@
 using WPFSampleApplication.Service.Abstractions;
 using WPFSampleApplication.Service.Configurations.Service;
 using WPFSampleApplication.Service.Dtos;
-using WPFSampleApplication.Service.Exceptions;
 using WPFSampleApplication.Service.Policies;
-using WPFSampleApplication.Service.Resources;
 
 namespace WPFSampleApplication.Service.Services;
 

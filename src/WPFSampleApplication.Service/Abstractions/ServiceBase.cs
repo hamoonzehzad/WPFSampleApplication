@@ -4,7 +4,6 @@ using WPFSampleApplication.Service.Configurations.Service;
 using WPFSampleApplication.Service.Exceptions;
 using WPFSampleApplication.Service.Policies;
 using WPFSampleApplication.Service.Resources;
-using Polly;
 using Polly.Retry;
 using System.Net.Http.Headers;
 using System.Text;

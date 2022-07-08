@@ -12,7 +12,7 @@ namespace WPFSampleApplication.Service.Policies;
 /// </summary>
 internal sealed class HttpClientPolicy : ServicePolicyBase, IHttpClientPolicy
 {
-    #region MyRegion
+    #region Fields
 
     private readonly PolicyOptions _policyOptions;
 

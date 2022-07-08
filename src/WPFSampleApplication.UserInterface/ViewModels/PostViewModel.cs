@@ -1,8 +1,5 @@
-﻿using WPFSampleApplication.Service.Exceptions;
-using WPFSampleApplication.Service.Services;
+﻿using WPFSampleApplication.Service.Services;
 using WPFSampleApplication.UserInterface.Abstractions;
-using WPFSampleApplication.UserInterface.Exceptions;
-using WPFSampleApplication.UserInterface.Resources;
 using WPFSampleApplication.UserInterface.Stores;
 using Prism.Commands;
 using System.Collections.ObjectModel;
